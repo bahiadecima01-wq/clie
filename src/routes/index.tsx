@@ -19,7 +19,11 @@ import retrato from "@/assets/esteticista_retrato.png.asset.json";
 import facial from "@/assets/facial.jpg";
 import corporal from "@/assets/corporal.jpg";
 import produtos from "@/assets/produtos.jpg";
-import pele from "@/assets/pele.jpg";
+import acne from "@/assets/acne.jpg";
+import clareamento from "@/assets/clareamento.jpg";
+import medidas from "@/assets/medidas.jpg";
+import modeladora from "@/assets/modeladora.jpg";
+import consulta from "@/assets/consulta.jpg";
 import mascara from "@/assets/mascara.jpg";
 import { waLink, GENERAL_MSG, treatmentMsg } from "@/lib/whatsapp";
 
@@ -61,13 +65,13 @@ const nav = [
 const treatments = [
   { name: "Limpeza de Pele", img: facial, desc: "Remove impurezas, desobstrui os poros e devolve frescor e luminosidade à pele." },
   { name: "Drenagem Linfática", img: corporal, desc: "Técnica manual suave que auxilia na redução do inchaço e promove sensação de leveza." },
-  { name: "Massagem Modeladora", img: corporal, desc: "Movimentos firmes e ritmados que ajudam a contornar a silhueta e ativar a circulação." },
+  { name: "Massagem Modeladora", img: modeladora, desc: "Movimentos firmes e ritmados que ajudam a contornar a silhueta e ativar a circulação." },
   { name: "Tratamentos Faciais", img: mascara, desc: "Protocolos que hidratam, revitalizam e cuidam da saúde da sua pele em cada fase." },
   { name: "Tratamentos Corporais", img: produtos, desc: "Cuidados para firmeza, textura e bem-estar do corpo, com atenção às suas necessidades." },
-  { name: "Tratamento para Acne", img: pele, desc: "Abordagem cuidadosa para controlar a oleosidade e acompanhar a evolução da pele acneica." },
-  { name: "Clareamento de Pele", img: pele, desc: "Protocolos que ajudam a uniformizar o tom e suavizar manchas com segurança." },
-  { name: "Redução de Medidas", img: produtos, desc: "Combinação de técnicas para auxiliar na redução de medidas e no contorno corporal." },
-  { name: "Protocolos Estéticos Personalizados", img: mascara, desc: "Um plano pensado exclusivamente para você, a partir de uma avaliação individual." },
+  { name: "Tratamento para Acne", img: acne, desc: "Abordagem cuidadosa para controlar a oleosidade e acompanhar a evolução da pele acneica." },
+  { name: "Clareamento de Pele", img: clareamento, desc: "Protocolos que ajudam a uniformizar o tom e suavizar manchas com segurança." },
+  { name: "Redução de Medidas", img: medidas, desc: "Combinação de técnicas para auxiliar na redução de medidas e no contorno corporal." },
+  { name: "Protocolos Estéticos Personalizados", img: consulta, desc: "Um plano pensado exclusivamente para você, a partir de uma avaliação individual." },
 ];
 
 const diferenciais = [
@@ -203,11 +207,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="mx-auto mt-20 grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-2">
-            <div className="grid grid-cols-2 gap-4">
-              <img src={mascara} alt="Preparo de máscara facial na CLIE Academy" loading="lazy" width={896} height={1088} className="aspect-[3/4] w-full rounded-md object-cover" />
-              <img src={corporal} alt="Sala de tratamentos corporais da clínica" loading="lazy" width={896} height={1088} className="mt-12 aspect-[3/4] w-full rounded-md object-cover" />
-            </div>
+          <div className="mx-auto mt-16 max-w-3xl border-t border-border px-5 pt-14 text-center md:px-8">
             <div>
               <p className="eyebrow">Quem cuida de você</p>
               <h2 className="mt-4 text-4xl text-charcoal md:text-5xl">Seu cuidado em boas mãos.</h2>
@@ -232,7 +232,7 @@ function Index() {
               {treatments.map((t) => (
                 <article key={t.name} className="group flex flex-col overflow-hidden rounded-md bg-card shadow-soft transition-transform duration-500 hover:-translate-y-1">
                   <div className="overflow-hidden">
-                    <img src={t.img} alt={`${t.name} em Porto Seguro - CLIE Academy`} loading="lazy" width={896} height={1088} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={t.img} alt={`${t.name} em Porto Seguro - CLIE Academy`} loading="lazy" width={1024} height={768} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="flex flex-1 flex-col p-7">
                     <h3 className="text-2xl text-charcoal">{t.name}</h3>
