@@ -14,8 +14,8 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react";
-import logo from "@/assets/clie_logo.png.asset.json";
-import retrato from "@/assets/esteticista_retrato.png.asset.json";
+import logoUrl from "@/assets/clie-logo.jpg";
+import retratoUrl from "@/assets/owner-portrait.jpg";
 import facial from "@/assets/facial.jpg";
 import corporal from "@/assets/corporal.jpg";
 import produtos from "@/assets/produtos.jpg";
@@ -111,7 +111,7 @@ function Header() {
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
         <a href="#inicio" aria-label="CLIE Academy - Início">
-          <img src={logo.url} alt="CLIE Academy Clínica Estética" className="h-14 w-auto rounded-sm mix-blend-multiply" />
+          <img src={logoUrl} alt="CLIE Academy Clínica Estética" width={1286} height={1223} className="h-16 w-auto object-contain mix-blend-multiply" />
         </a>
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">
           {nav.map((n) => (
@@ -173,9 +173,9 @@ function Index() {
             <div className="reveal relative mx-auto w-full max-w-md lg:max-w-none" style={{ animationDelay: "0.15s" }}>
               <div className="absolute -inset-4 translate-x-6 translate-y-6 rounded-t-full border border-primary/40" aria-hidden="true" />
               <img
-                src={retrato.url}
+                src={retratoUrl}
                 alt="Esteticista da CLIE Academy, clínica de estética em Porto Seguro"
-                className="relative aspect-[4/5] w-full rounded-t-full object-cover shadow-soft"
+                width={1254} height={1254} className="relative aspect-[4/5] w-full rounded-t-full object-cover object-[50%_25%] shadow-soft"
               />
               <div className="absolute -bottom-5 -left-3 rounded-md bg-card px-5 py-4 shadow-soft sm:-left-8">
                 <p className="font-serif text-xl italic text-charcoal">Cuidado sob medida</p>
@@ -331,7 +331,7 @@ function Index() {
       <footer className="bg-sage pt-16 pb-8">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 md:px-8">
           <div>
-            <img src={logo.url} alt="CLIE Academy Clínica Estética" loading="lazy" className="h-24 w-auto mix-blend-multiply" />
+            <img src={logoUrl} alt="CLIE Academy Clínica Estética" loading="lazy" width={1286} height={1223} className="h-28 w-auto object-contain mix-blend-multiply" />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               Clínica de estética em Porto Seguro especializada em tratamentos faciais e corporais personalizados.
             </p>
